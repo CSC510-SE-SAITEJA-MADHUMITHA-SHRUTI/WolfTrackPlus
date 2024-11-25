@@ -7,15 +7,15 @@ def s_email(
     company_name,
     location,
     job_Profile,
-    # salary,
-    # username,
-    # password,
+    salary,
+    username,
+    password,
     email,
-    # security_question,
-    # security_answer,
-    # notes,
-    # date_applied,
-    # status,
+    security_question,
+    security_answer,
+    notes,
+    date_applied,
+    status,
 ):
     """
     Send an email to notify the user.
