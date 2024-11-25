@@ -35,8 +35,8 @@ def s_email(
         f"WOLFTRACK++ APPLICATION\n\n"
         f"You have applied to {company_name} for the job profile - {job_Profile}.\n"
         f"Location: {location}\n"
-        # f"Salary: {salary}\n"
-        # f"Status: {status}\n\n"
+        f"Salary: {salary}\n"
+        f"Status: {status}\n\n"
         f"All the best for your application!\n"
         f"The WolfTrack++ Team."
     )
