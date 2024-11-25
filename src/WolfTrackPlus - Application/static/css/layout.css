@@ -1,87 +1,62 @@
 :root {
-    /* Updated theme colors for a consistent and visually pleasing design */
-    --theme-dark: #1C2833; /* Dark navy for background */
-    --theme-light: #34495E; /* Soft blue for cards and secondary elements */
-    --text-color: #ECF0F1; /* Light gray for readable text */
-    --navbar-background: #2C3E50; /* Slightly darker for the navbar */
-    --card-icon-color: #E74C3C; /* Accent color for icons */
-    --scrollbar-thumb: #7F8C8D; /* Subtle contrast for scrollbar thumb */
-}
+    --theme-dark: #225161;
+    --theme-light: #295D6B;
+    --text-color: white;
+    --navbar-background: #16353f;
+  }
 
 .navbar {
     background-color: var(--navbar-background);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    padding: 1rem;
 }
 
 .sidenav {
-    padding-top: 20px;
-    background-color: var(--theme-light);
-    color: var(--text-color);
-    border-right: 2px solid var(--navbar-background);
-}
+    padding-top: 20px;    
+  }
 
 .main-content {
     padding-top: 20px;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 .status-card {
     margin: 20px;
     background-color: var(--theme-light);
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: var(--text-color);
+    border-radius: 10%;
 }
 
 .list-group-item {
     background-color: var(--theme-light);
-    color: var(--text-color);
-    border-bottom: 1px solid var(--navbar-background);
 }
 
 body {
     color: var(--text-color);
     background-color: var(--theme-dark);
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-}
+  }
 
 .card-icons {
-    font-size: 80px;
+    font-size:80px;
     margin-top: 10px;
-    color: var(--card-icon-color);
+    color: #16353F;
 }
 
-.sidenav-right, .sidenav-left {
-    color: var(--text-color);
-    padding-top: 40px;
-    padding-left: 10px;
+.sidenav-right,.sidenav-left {
+    color: black;
+    padding-top: 40pt;
 }
 
 .new-application-modal {
     color: black;
-    background-color: white;
-    padding: 1rem;
-    border-radius: 10px;
 }
 
 ::-webkit-scrollbar {
-    width: 10px; /* width of the entire scrollbar */
+    width: 12px;               /* width of the entire scrollbar */
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--theme-light); /* color of the tracking area */
+    background: var(--theme-light);        /* color of the tracking area */
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--scrollbar-thumb); /* color of the scroll thumb */
-    border-radius: 20px; /* roundness of the scroll thumb */
-    border: 3px solid var(--theme-light); /* creates padding around scroll thumb */
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: var(--navbar-background); /* darker hover color for thumb */
+    background-color: var(--navbar-background);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid var(--theme-light);  /* creates padding around scroll thumb */
 }
