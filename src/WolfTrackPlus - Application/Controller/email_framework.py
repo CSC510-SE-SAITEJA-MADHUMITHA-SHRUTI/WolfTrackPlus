@@ -8,13 +8,13 @@ def s_email(
     location,
     job_Profile,
     salary,
-    # username,
-    # password,
+    username,
+    password,
     email,
-    # security_question,
-    # security_answer,
-    # notes,
-    # date_applied,
+    security_question,
+    security_answer,
+    notes,
+    date_applied,
     status,
 ):
     """
@@ -32,23 +32,13 @@ def s_email(
 
     subject = "WolfTrack++ - Job Application Added"
     body = (
-        "WOLFTRACK++ APPLICATION \n\n"
-        "You have applied to "
-        + company_name
-        + " for the job profile - "
-        + job_Profile
-        + ". \nPlease find the details below: \n"
-        # "Date Applied: " + date_applied + "\n"
-        "Location: " + location + "\n"
-        "Salary: " + salary + "\n"
-        # "User_name: " + username + "\n"
-        # "Password: " + password + "\n"
-        # "Security Question: " + security_question + "\n"
-        # "Security Answer: " + security_answer + "\n"
-        "Status: " + status + "\n"
-        # "Notes: " + notes + "\n\n\n"
-        "All the best for you Application!\n"
-        "The WolfTrack++ Team."
+        f"WOLFTRACK++ APPLICATION\n\n"
+        f"You have applied to {company_name} for the job profile - {job_Profile}.\n"
+        f"Location: {location}\n"
+        f"Salary: {salary}\n"
+        f"Status: {status}\n\n"
+        f"All the best for your application!\n"
+        f"The WolfTrack++ Team."
     )
     message = MIMEMultipart()
     message["From"] = sender_email
@@ -66,6 +56,53 @@ def s_email(
         server.sendmail(sender_email, receiver_email, text)
 
     return True
+
+import pyotp
+
+def send_otp_email(email, secret=None):
+    """
+    Generates an OTP and sends it to the user's email.
+    :param email: Email address to send the OTP to.
+    :param secret: (Optional) Unique secret for the user. If None, generates a new one.
+    :return: True if the email was sent successfully, otherwise False.
+    """
+    # Generate OTP
+    if secret is None:
+        secret = pyotp.random_base32()  # Generate a new secret if not provided
+    totp = pyotp.TOTP(secret)
+    otp = totp.now()  # Generate the OTP
+
+    # Prepare email details
+    sender_email = "wolftrackproject@gmail.com"
+    receiver_email = email
+    password = "dlafyfekdkmdfjdi"
+    subject = "Your WolfTrack++ Login OTP"
+    body = (
+        f"Hello,\n\n"
+        f"Your OTP for logging into WolfTrack++ is: {otp}\n\n"
+        f"This OTP is valid for 30 seconds.\n\n"
+        f"Regards,\nThe WolfTrack++ Team"
+    )
+
+    # Create email message
+    message = MIMEMultipart()
+    message["From"] = sender_email
+    message["To"] = receiver_email
+    message["Subject"] = subject
+    message.attach(MIMEText(body, "plain"))
+
+    # Send the email
+    context = ssl.create_default_context()
+    try:
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+            server.login(sender_email, password)
+            server.sendmail(sender_email, receiver_email, message.as_string())
+        print(f"OTP sent to {email}")
+        return True, secret  # Return the secret for storing
+    except Exception as e:
+        print(f"Failed to send OTP email: {e}")
+        return False, None
+
 
 
 # New function to send registration email

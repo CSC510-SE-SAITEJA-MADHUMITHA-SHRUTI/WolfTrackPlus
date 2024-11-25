@@ -1,14 +1,14 @@
 from datetime import datetime
 import json
 from sqlite3 import IntegrityError
-from flask import Blueprint, flash, session,jsonify
+from flask import Blueprint, flash, session,jsonify,redirect
 from flask import Flask, render_template, url_for, request, send_file
 from flask_login import login_required, logout_user, login_manager
 from werkzeug.utils import redirect
 from Controller.user_controller import User
 from Controller.application_controller import Application
 from Controller.password_reset_controller import PasswordReset
-from Controller.email_framework import *
+from Controller.email_framework import s_email, send_otp_email 
 from Controller.geocoding_helper import get_location_coordinates
 from collections import Counter
 import requests
@@ -23,6 +23,9 @@ from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 import pandas as pd
+import pyotp 
+from Controller.user_controller import User
+
 
 project_root = Path(__file__).parent.parent
 
@@ -189,25 +192,58 @@ def passwordReset():
         return render_template("forgot.html", codeSent="yes", email=session["email"], forgotError=error)
 
 
-@home_route.route("/loginUser", methods=["GET", "POST"])
-def loginUser():
+
+
+
+@home_route.route("/loginUser", methods=["POST"])
+def login_user():
     """
-    When encoundering the /loginUser url, this is function is called. it intercepts both get and post requests.
-    If recieved a get request, it fetches the login page. if recieved a post request, it checks if the login credentials are valid.
-    If the credentials are valid then page is redirected home page of the user.
+    Handles login, generates OTP, and sends it to the user's email.
     """
-    session["email"] = request.form["username"]
-    password = request.form["password"]
-    result = user.get(session["email"], password)
-    error = ""
-    if result == 0:
-        error = "Email does not exits. Please enter a valid email."
-        return render_template("login.html", loginError=error)
-    elif result == 2:
-        error = "Password incorrect."
-        return render_template("login.html", loginError=error)
-    else:
-        return redirect("/auth")
+    email = request.form["username"]  # User's email
+    password = request.form["password"]  # User's password
+
+    # Validate user credentials (replace this with your database query)
+    user_data = user.get(email, password)  # Assuming `user.get` fetches user info
+    if user_data == 0:
+        return render_template("login.html", loginError="Email does not exist. Please enter a valid email.")
+    elif user_data == 2:
+        return render_template("login.html", loginError="Incorrect password.")
+
+    # Generate and send OTP
+    success, secret = send_otp_email(email)
+    if not success:
+        return render_template("login.html", loginError="Failed to send OTP. Please try again.")
+
+    # Store secret and other details in the session
+    session["otp_secret"] = secret
+    session["email"] = email
+    session["otp_verified"] = False
+
+    # Redirect to the OTP verification page
+    return redirect("/verify_otp")
+
+
+@home_route.route("/verify_otp", methods=["GET", "POST"])
+def verify_otp():
+    """
+    Verifies the OTP entered by the user.
+    """
+    if request.method == "POST":
+        otp = request.form["otp"]  # OTP entered by the user
+        secret = session.get("otp_secret")  # Retrieve the secret from the session
+
+        # Validate the OTP
+        if secret and pyotp.TOTP(secret).verify(otp):
+            session["otp_verified"] = True  # Mark the OTP as verified
+            return redirect("/auth")  # Redirect to the authenticated page
+        else:
+            return render_template("verify_otp.html", error="Invalid OTP. Please try again.")
+
+    # Render the OTP input page for GET requests
+    return render_template("verify_otp.html")
+
+
 
 
 @home_route.route("/signup", methods=["POST"])
@@ -388,13 +424,13 @@ def add_new_application():
         location,
         job_profile,
         salary,
-        # username,
-        # password,
+        username,
+        password,
         session["email"],
-        # security_question,
-        # security_answer,
-        # notes,
-        # date_applied,
+        security_question,
+        security_answer,
+        notes,
+        date_applied,
         status,
     )
     return redirect("/auth")
