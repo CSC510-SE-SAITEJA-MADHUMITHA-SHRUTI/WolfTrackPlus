@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Verify OTP</title>
+</head>
+<body>
+    <h2>Enter OTP</h2>
+    <form method="POST">
+        <input type="text" name="otp" placeholder="Enter OTP" required>
+        <button type="submit">Verify OTP</button>
+    </form>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
