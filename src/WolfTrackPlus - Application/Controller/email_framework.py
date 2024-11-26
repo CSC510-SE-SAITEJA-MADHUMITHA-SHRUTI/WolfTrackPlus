@@ -251,4 +251,4 @@ def successful_reset_email(email):
 
 
 if __name__ == "__main__":
-    status_change_email("1", "swetha11895@gmail.com", "In Review")
+    status_change_email("1", "slabba@ncsu.edu", "In Review")
