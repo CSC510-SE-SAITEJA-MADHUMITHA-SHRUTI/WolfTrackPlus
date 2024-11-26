@@ -77,8 +77,8 @@ def fetch_upcoming_events_temp():
 
 
 @home_route.route("/", methods=["GET"])
-# def home():
-#     return redirect("/auth")
+def home():
+    return redirect("/auth")
 @home_route.route("/login", methods=["GET", "POST"])
 def login():
     return render_template("login.html", loginError="")
@@ -224,6 +224,10 @@ def login_user():
     return redirect("/verify_otp")
 
 
+# from flask import request, session, redirect, render_template
+# import pyotp
+import logging
+
 @home_route.route("/verify_otp", methods=["GET", "POST"])
 def verify_otp():
     """
@@ -233,15 +237,19 @@ def verify_otp():
         otp = request.form["otp"]  # OTP entered by the user
         secret = session.get("otp_secret")  # Retrieve the secret from the session
 
-        # Validate the OTP
-        if secret and pyotp.TOTP(secret).verify(otp):
-            session["otp_verified"] = True  # Mark the OTP as verified
-            return redirect("/auth")  # Redirect to the authenticated page
-        else:
-            return render_template("verify_otp.html", error="Invalid OTP. Please try again.")
+        print(f"OTP Secret: {secret}")  # Debug
+        if secret:
+            totp = pyotp.TOTP(secret)
+            print(f"Expected OTP: {totp.now()}")  # Debug
+            if totp.verify(otp, valid_window=1):  # Allow a 30-sec offset
+                session["otp_verified"] = True  # Mark the OTP as verified
+                return redirect("/auth")  # Redirect to the authenticated page
+        return render_template("verify_otp.html", error="Invalid OTP. Please try again.")
 
     # Render the OTP input page for GET requests
     return render_template("verify_otp.html")
+
+
 
 
 
