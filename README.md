@@ -1,3 +1,24 @@
+### Version Tags
+
+[![DOI](https://zenodo.org/badge/880548962.svg)](https://doi.org/10.5281/zenodo.14027305)
+![Python](https://img.shields.io/badge/python-v3.8+-green.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Github](https://img.shields.io/badge/language-python-red.svg)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/dinesh-pasupuleti/WolfTrackPlus)
+![GitHub open issues](https://img.shields.io/github/issues/dinesh-pasupuleti/WolfTrackPlus)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/dinesh-pasupuleti/WolfTrackPlus)
+[![GitHub version](https://img.shields.io/github/v/release/dinesh-pasupuleti/WolfTrackPlus)](https://github.com/dinesh-pasupuleti/WolfTrackPlus/releases)
+[![Python Style Checker](https://github.com/dinesh-pasupuleti/WolfTrackPlus/actions/workflows/style_checker.yml/badge.svg)](https://github.com/dinesh-pasupuleti/WolfTrackPlus/actions/workflows/style_checker.yml)
+[![Code Formatting](https://github.com/dinesh-pasupuleti/WolfTrackPlus/actions/workflows/code-format.yml/badge.svg)](https://github.com/dinesh-pasupuleti/WolfTrackPlus/actions/workflows/code-format.yml)
+![GitHub all downloads](https://img.shields.io/github/downloads/dinesh-pasupuleti/WolfTrackPlus/total)
+[![Lint Python](https://github.com/dinesh-pasupuleti/WolfTrackPlus/actions/workflows/syntax_checker.yml/badge.svg)](https://github.com/dinesh-pasupuleti/WolfTrackPlus/actions/workflows/syntax_checker.yml)
+[![Unit Tests](https://github.com/dinesh-pasupuleti/WolfTrackPlus/actions/workflows/python-tests.yml/badge.svg)](https://github.com/dinesh-pasupuleti/WolfTrackPlus/actions/workflows/python-tests.yml)
+[![Code Coverage](https://codecov.io/gh/dinesh-pasupuleti/WolfTrackPlus/branch/main/graph/badge.svg?token=YOUR_CODECOV_TOKEN)](https://codecov.io/gh/dinesh-pasupuleti/WolfTrackPlus)
+[![Documentation Status](https://readthedocs.org/projects/wolftrackplus/badge/?version=latest)](https://wolftrackplus.readthedocs.io/en/latest/?badge=latest)
+
+
+
 <h1 align= "left"><b>WolfTrackPlus</b></h1>
 
 ![image](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/project3/Project3/Assets/job-app-tracker.jpg?raw=true)
@@ -32,7 +53,7 @@ Looking for a seamless way to manage your job search? Our Job Application Tracke
 - [License](#license)
 
 
-### Version Tags
+<!-- ### Version Tags
 
 [![DOI](https://zenodo.org/badge/880548962.svg)](https://doi.org/10.5281/zenodo.14027305)
 ![Python](https://img.shields.io/badge/python-v3.8+-green.svg)
@@ -49,7 +70,7 @@ Looking for a seamless way to manage your job search? Our Job Application Tracke
 [![Lint Python](https://github.com/dinesh-pasupuleti/WolfTrackPlus/actions/workflows/syntax_checker.yml/badge.svg)](https://github.com/dinesh-pasupuleti/WolfTrackPlus/actions/workflows/syntax_checker.yml)
 [![Unit Tests](https://github.com/dinesh-pasupuleti/WolfTrackPlus/actions/workflows/python-tests.yml/badge.svg)](https://github.com/dinesh-pasupuleti/WolfTrackPlus/actions/workflows/python-tests.yml)
 [![Code Coverage](https://codecov.io/gh/dinesh-pasupuleti/WolfTrackPlus/branch/main/graph/badge.svg?token=YOUR_CODECOV_TOKEN)](https://codecov.io/gh/dinesh-pasupuleti/WolfTrackPlus)
-[![Documentation Status](https://readthedocs.org/projects/wolftrackplus/badge/?version=latest)](https://wolftrackplus.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/wolftrackplus/badge/?version=latest)](https://wolftrackplus.readthedocs.io/en/latest/?badge=latest) -->
 
 
 
@@ -184,11 +205,12 @@ In case of any issues, please e-mail your queries to shivakandhagatla1999@gmail.
 
  ## Contributors
    
-  <ul style="list-style-type:  '- ' ; padding: 0;">
-  <li><a href="https://github.com/dinesh-pasupuleti" style="text-decoration: none; color: black;">Dinesh Pasupuleti</a></li>
-  <li><a href="https://github.com/srivardhanvura" style="text-decoration: none; color: black;">Srivardhan Vura</a></li>
-  <li><a href="https://github.com/jayjoshi1400" style="text-decoration: none; color: black;">Jay Joshi</a></li>
-</ul>
+  <table>
+  <tr>
+    <td align="center"><img src="https://avatars.githubusercontent.com/u/52523348?s=400&u=cac0a94ddf495fa55653b2d012f946166555b8b9&v=4" width="75px;" alt=""/><br /><sub><b>Saiteja Labba</b></sub></a></td>
+    <td align="center"><img src="https://avatars.githubusercontent.com/u/144171816?s=400&u=e9fb80d2e9acb2fc438881017b49e6d26720a50d&v=4" width="75px;" alt=""/><br /><sub><b>Jaya Shruti Chintalapati</b></sub></a><br /></td>
+  </tr>
+</table>
 
  ## Contribution
   
