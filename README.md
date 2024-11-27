@@ -234,7 +234,7 @@ An email is sent when a new account is created, new job application is submitted
 
 
 ## Contact 
-In case of any issues, please e-mail your queries to slabba@ncsu.edu or raise an issue on this repository.
+In case of any issues, please e-mail your queries to wolftrackse@gmail.com or raise an issue on this repository.
 
  ## Contributors
    
