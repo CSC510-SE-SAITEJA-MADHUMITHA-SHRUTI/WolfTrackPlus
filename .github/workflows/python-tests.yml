@@ -37,4 +37,6 @@ jobs:
       - name: Upload Coverage to Codecov
         uses: codecov/codecov-action@v3
         with:
+          token: db420486-7d10-4f4d-87ef-27d2385c2f6d  # Use the secret here
           file: coverage.xml
+          flags: unittests
