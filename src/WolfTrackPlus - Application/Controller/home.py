@@ -8,8 +8,7 @@ from werkzeug.utils import redirect
 from Controller.user_controller import User
 from Controller.application_controller import Application
 from Controller.password_reset_controller import PasswordReset
-from Controller.email_framework import s_email, send_otp_email , status_change_email
-from Controller.email_framework import password_reset_email, successful_reset_email, send_registration_email
+from Controller.email_framework import s_email, send_otp_email , status_change_email, password_reset_email, successful_reset_email, send_registration_email
 from Controller.geocoding_helper import get_location_coordinates
 from collections import Counter
 import requests
