@@ -151,15 +151,6 @@ With WolfTrackPlus, managing your job search has never been easier. Say goodbye 
    
     
 ---
-## Third-Party Tools
-
-- [AWS Relational Database Service-RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html)
-  -  The AWS Database is used as a primary DB by the location. The application interacts with the DB and no additional steps are required from the users.
-  -  Create a RDS server in AWS and make the changes in sql_helper.py
-  -  For any contributors or future developers, please mail to wolftrackse@gmail.com to get your AWS IAM user account details to connect to AWS RDS.
-  
-
----
 ## Preview
 
 - **Sign Up Page**
@@ -178,11 +169,19 @@ With WolfTrackPlus, managing your job search has never been easier. Say goodbye 
 ![image](https://github.com/user-attachments/assets/edca8a12-195d-4b55-9df1-ad544340b7f9)
 
 
--**Multi-Factor Authentication**
-WolfTrackPlus implements Multi-Factor Authentication (MFA) through One-Time Passwords (OTP) to enhance the security of user accounts. MFA adds an additional layer of protection by requiring users to provide two forms of verification before they can access their account: something they know (password) and something they have (OTP sent to their email).
+- **Multi-Factor Authentication**
+    WolfTrackPlus implements Multi-Factor Authentication (MFA) through One-Time Passwords (OTP) to enhance the security of user accounts. MFA adds an additional layer of protection by requiring users to provide two forms of verification before they can access their account: something they know (password) and something they have (OTP sent to their email).
 
 ![image](https://github.com/CSC510-SE-SAITEJA-MADHUMITHA-SHRUTI/WolfTrackPlus/blob/feature/mfa/location.png)
 
+## AWS for Data Storage
+
+- [AWS Relational Database Service-RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html)
+  -  The AWS Database is used as a primary DB by the location. The application interacts with the DB and no additional steps are required from the users.
+  -  Create a RDS server in AWS and make the changes in sql_helper.py
+  -  For any contributors or future developers, please mail to wolftrackse@gmail.com to get your AWS IAM user account details to connect to AWS RDS.
+
+   ![image](https://github.com/user-attachments/assets/c6f3737d-ec67-480a-bb36-d8cc03ee2eb9)
 
 ## Dashboard
 
@@ -211,12 +210,11 @@ Helps in location-tracking functionality of job applications. This feature allow
     
 ---
 ## Email Notifiications
+The Email Notifications on Status Change feature is designed to keep users informed about the latest updates related to their job applications. Whenever there is a change in the status of a job application—such as moving to a new stage or receiving feedback—the system automatically sends an email notification to the user.
 
+Once the status of the application changes (for example, from "Applied" to "In Review" or "Interview Scheduled"), the system triggers an automatic update.
 
-
-
-
-
+![image](https://github.com/CSC510-SE-SAITEJA-MADHUMITHA-SHRUTI/WolfTrackPlus/blob/feature/mfa/location.png)
 
 An email is sent when a new account is created, new job application is submitted, or a status change in application.
 
