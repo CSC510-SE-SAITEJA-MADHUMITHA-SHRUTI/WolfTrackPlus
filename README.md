@@ -8,6 +8,7 @@
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/dinesh-pasupuleti/WolfTrackPlus)
 ![GitHub open issues](https://img.shields.io/github/issues/dinesh-pasupuleti/WolfTrackPlus)
 ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/dinesh-pasupuleti/WolfTrackPlus)
+![GitHub contributors](https://img.shields.io/github/contributors/tpanati/DollarBot)
 [![GitHub version](https://img.shields.io/github/v/release/dinesh-pasupuleti/WolfTrackPlus)](https://github.com/dinesh-pasupuleti/WolfTrackPlus/releases)
 [![Python Style Checker](https://github.com/dinesh-pasupuleti/WolfTrackPlus/actions/workflows/style_checker.yml/badge.svg)](https://github.com/dinesh-pasupuleti/WolfTrackPlus/actions/workflows/style_checker.yml)
 [![Code Formatting](https://github.com/dinesh-pasupuleti/WolfTrackPlus/actions/workflows/code-format.yml/badge.svg)](https://github.com/dinesh-pasupuleti/WolfTrackPlus/actions/workflows/code-format.yml)
@@ -26,6 +27,14 @@
 <h3> Are you struggling to track job applications? WolfTrack keep track of them, with all new WolfTrackPlus!!! </h3>
 
 Looking for a seamless way to manage your job search? Our Job Application Tracker is your one-stop solution to streamline and organize the entire job application process. No more scattered notes, missed deadlines, or forgotten details – stay on top of your career journey with ease. Say goodbye to the hassle of managing multiple spreadsheets or forgetting important details. With our Job Application Tracker, take control of your job search journey and pave the way for a more organized and successful career transition. Start tracking, start succeeding.
+
+
+<hr>
+<p align="center">
+<a><img width=500 
+  src="https://img.freepik.com/premium-photo/3d-flat-icon-business-financial-concept-financial-analysts-presenting-growth-projections_980716-68719.jpg?w=1380" ></a>
+</p>
+<hr>
 
 ### Link to Demonstration Video of the Project: 
 
@@ -201,7 +210,7 @@ An email is sent when a new account is created, new job application is submitted
 
 
 ## Contact 
-In case of any issues, please e-mail your queries to shivakandhagatla1999@gmail.com or raise an issue on this repository
+In case of any issues, please e-mail your queries to slabba@ncsu.edu or raise an issue on this repository.
 
  ## Contributors
    
