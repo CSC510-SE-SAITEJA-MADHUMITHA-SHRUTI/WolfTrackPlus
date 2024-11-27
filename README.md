@@ -214,7 +214,7 @@ The Email Notifications on Status Change feature is designed to keep users infor
 
 Once the status of the application changes (for example, from "Applied" to "In Review" or "Interview Scheduled"), the system triggers an automatic update.
 
-![image](https://github.com/CSC510-SE-SAITEJA-MADHUMITHA-SHRUTI/WolfTrackPlus/blob/feature/mfa/location.png)
+![image](https://github.com/CSC510-SE-SAITEJA-MADHUMITHA-SHRUTI/WolfTrackPlus/blob/feature/mfa/Statusemail.png)
 
 An email is sent when a new account is created, new job application is submitted, or a status change in application.
 
