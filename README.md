@@ -181,7 +181,7 @@ With WolfTrackPlus, managing your job search has never been easier. Say goodbye 
 -**Multi-Factor Authentication**
 WolfTrackPlus implements Multi-Factor Authentication (MFA) through One-Time Passwords (OTP) to enhance the security of user accounts. MFA adds an additional layer of protection by requiring users to provide two forms of verification before they can access their account: something they know (password) and something they have (OTP sent to their email).
 
-![image](https://github.com/user-attachments/assets/c6f3737d-ec67-480a-bb36-d8cc03ee2eb9)
+![image](https://github.com/CSC510-SE-SAITEJA-MADHUMITHA-SHRUTI/WolfTrackPlus/blob/feature/mfa/location.png)
 
 
 ## Dashboard
