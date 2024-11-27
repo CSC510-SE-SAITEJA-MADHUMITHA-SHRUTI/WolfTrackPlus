@@ -20,13 +20,19 @@
 
 
 
-<h1 align= "left"><b>WolfTrackPlus</b></h1>
+<h1 align= "left"><b>WolfTrackPlus🚀💼</b></h1>
 
 ![image](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/project3/Project3/Assets/job-app-tracker.jpg?raw=true)
 
-<h3> Are you struggling to track job applications? WolfTrack keep track of them, with all new WolfTrackPlus!!! </h3>
+<h3> Are you struggling to track job applications?  The Ultimate Job Application Tracker !!! </h3>
 
-Looking for a seamless way to manage your job search? Our Job Application Tracker is your one-stop solution to streamline and organize the entire job application process. No more scattered notes, missed deadlines, or forgotten details – stay on top of your career journey with ease. Say goodbye to the hassle of managing multiple spreadsheets or forgetting important details. With our Job Application Tracker, take control of your job search journey and pave the way for a more organized and successful career transition. Start tracking, start succeeding.
+🚀 Looking for a Seamless Way to Manage Your Job Search? 📈
+
+Our Job Application Tracker is your one-stop solution to streamline and organize the entire job application process. No more scattered notes, missed deadlines, or forgotten details – stay on top of your career journey with ease.
+
+📅 Say Goodbye to the hassle of managing multiple spreadsheets or losing track of key details.
+
+With WolfTrackPlus, take control of your job search and pave the way for a more organized and successful career transition. Start tracking today and take the first step towards success! 🌟💼
 
 
 <hr>
@@ -36,9 +42,14 @@ Looking for a seamless way to manage your job search? Our Job Application Tracke
 </p>
 <hr>
 
+## Scorecard
+
+[Score card - Group 13](https://github.com/tpanati/DollarBot/)
+
+
 ### Link to Demonstration Video of the Project: 
 
-[Project 3 - Youtube Link](https://www.youtube.com/watch?v=7mjmc1x7qTE)
+[Project 3 - Youtube Link](https://w)
 
 # Table of Contents  
 
@@ -89,7 +100,10 @@ Looking for a seamless way to manage your job search? Our Job Application Tracke
 Build a comprehensive Job-Tracker application.
 
 ### Features
-Keep track of dates, notes, tasks, job details, salaries, locations, and valuable company insights to help users efficiently manage and organize their job application process.
+Keep track of dates, notes, tasks, job details, salaries, locations, and valuable company insights with ease. Our Job Application Tracker helps you stay organized and on top of every step in your job application process.
+
+With WolfTrackPlus, managing your job search has never been easier. Say goodbye to missed deadlines and lost details. Stay ahead and make your job search journey smooth and successful! 🚀💼
+.
 
 ### Explore
 
@@ -163,6 +177,13 @@ Keep track of dates, notes, tasks, job details, salaries, locations, and valuabl
     
 ![image](https://github.com/user-attachments/assets/edca8a12-195d-4b55-9df1-ad544340b7f9)
 
+
+-**Multi-Factor Authentication**
+WolfTrackPlus implements Multi-Factor Authentication (MFA) through One-Time Passwords (OTP) to enhance the security of user accounts. MFA adds an additional layer of protection by requiring users to provide two forms of verification before they can access their account: something they know (password) and something they have (OTP sent to their email).
+
+![image](https://github.com/user-attachments/assets/c6f3737d-ec67-480a-bb36-d8cc03ee2eb9)
+
+
 ## Dashboard
 
 - **Monthly Application Visualization**  
@@ -179,18 +200,23 @@ Keep track of dates, notes, tasks, job details, salaries, locations, and valuabl
 
 <br>
 
- - **All Job Applications Locations Display**
+ - **All Job Applications Locations Insights**
       
-The developed feature entails showcasing all the locations involved in the application process. Utilizing the OpenCage library, we retrieve coordinates corresponding to each location, enabling us to display them accurately on the website's map interface. This functionality allows users to visualize and explore the various application locations seamlessly integrated into the map displayed on the website.
+Helps in location-tracking functionality of job applications. This feature allows users to easily manage and visualize job application locations on a map, providing a more intuitive and organized way to track job opportunities across different cities and countries
 
 ![image](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/project3/Project3/Assets/Application_Locations.jpg?raw=true)
 
 <br>
 
-
     
 ---
 ## Email Notifiications
+
+
+
+
+
+
 
 An email is sent when a new account is created, new job application is submitted, or a status change in application.
 
