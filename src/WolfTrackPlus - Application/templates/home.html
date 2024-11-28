@@ -1,6 +1,75 @@
 {% extends "layout/base.html" %}
 {% block content %}
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Trends</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Salary Trends Across Applications</h1>
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5 class="card-title mb-0">Salary Trends</h5>
+            </div>
+            <div class="card-body">
+                <canvas id="salaryChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const apiUrl = "/analytics/salary-trends";
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.length > 0) {
+                        const companies = data.map(item => item.company);
+                        const salaries = data.map(item => item.salary);
+
+                        // Render the Chart
+                        const ctx = document.getElementById('salaryChart').getContext('2d');
+                        new Chart(ctx, {
+                            type: 'bar',
+                            data: {
+                                labels: companies,
+                                datasets: [{
+                                    label: 'Salary ($)',
+                                    data: salaries,
+                                    backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                                    borderColor: 'rgba(75, 192, 192, 1)',
+                                    borderWidth: 1
+                                }]
+                            },
+                            options: {
+                                responsive: true,
+                                scales: {
+                                    y: { beginAtZero: true },
+                                    x: {
+                                        ticks: {
+                                            autoSkip: false,
+                                            maxRotation: 45,
+                                            minRotation: 0
+                                        }
+                                    }
+                                }
+                            }
+                        });
+                    } else {
+                        console.log('No salary data available.');
+                    }
+                });
+        });
+    </script>
+</body>
+</html>
+
 
 <div class="row">
     <div class="card status-card col-md" style="width: 18rem;">
