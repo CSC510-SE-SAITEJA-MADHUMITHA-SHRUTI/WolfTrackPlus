@@ -44,12 +44,12 @@ With WolfTrackPlus, take control of your job search and pave the way for a more 
 
 ## Scorecard
 
-[Score card - Group 13](https://github.com/tpanati/DollarBot/)
+[Score card - Group 13](https://github.com/CSC510-SE-SAITEJA-MADHUMITHA-SHRUTI/WolfTrackPlus/blob/main/Project3_group81_scorecard.csv)
 
 
 ### Link to Demonstration Video of the Project: 
 
-[Project 3 - Youtube Link](https://w)
+[Project 3 - Youtube Link](https://drive.google.com/drive/u/1/folders/1ldsdRJUm-WCSdK10bPyL6lRfAX1q-qW2)
 
 # Table of Contents  
 
@@ -65,7 +65,7 @@ With WolfTrackPlus, take control of your job search and pave the way for a more 
   - [Login Page](#Login-Page)
   - [Dashboard](#Dashboard)
   - [Job Apply Feature](#Job-Apply-Feature)
-  - [All Job Applications Locations Display](#All-Job-Applications-Locations-Display)
+  - [Job Applications Locations Display](#All-Job-Applications-Locations-Display)
   - [Email Notifiications](#Email-Notifiications)
 - [Contact](#Contact)
 - [Contributors](#Contributors)
@@ -115,7 +115,7 @@ With WolfTrackPlus, managing your job search has never been easier. Say goodbye 
 
 ### Let's Conquer Together
 
-[GitHub Repository](https://github.com/prateeksingamsetty/WolfTrackPlus) Access the source code and contribute.
+[GitHub Repository](https://github.com/CSC510-SE-SAITEJA-MADHUMITHA-SHRUTI/WolfTrackPlus/tree/main) Access the source code and contribute.
 
 
 <!-- 
@@ -149,7 +149,6 @@ With WolfTrackPlus, managing your job search has never been easier. Say goodbye 
       - Download [Python3.x](https://www.python.org/downloads/).
 
    
-    
 ---
 ## Preview
 
@@ -172,7 +171,7 @@ With WolfTrackPlus, managing your job search has never been easier. Say goodbye 
 - **Multi-Factor Authentication**
     WolfTrackPlus implements Multi-Factor Authentication (MFA) through One-Time Passwords (OTP) to enhance the security of user accounts. MFA adds an additional layer of protection by requiring users to provide two forms of verification before they can access their account: something they know (password) and something they have (OTP sent to their email).
 
-![image](https://github.com/CSC510-SE-SAITEJA-MADHUMITHA-SHRUTI/WolfTrackPlus/blob/feature/mfa/location.png)
+![image](https://github.com/CSC510-SE-SAITEJA-MADHUMITHA-SHRUTI/WolfTrackPlus/blob/feature/mfa/MFA.png)
 
 ## AWS for Data Storage
 
@@ -199,11 +198,17 @@ With WolfTrackPlus, managing your job search has never been easier. Say goodbye 
 
 <br>
 
- - **All Job Applications Locations Insights**
+ - **Job Applications Locations Insights**
       
 Helps in location-tracking functionality of job applications. This feature allows users to easily manage and visualize job application locations on a map, providing a more intuitive and organized way to track job opportunities across different cities and countries
 
 ![image](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/project3/Project3/Assets/Application_Locations.jpg?raw=true)
+
+**Upload and track multiple versions of Resumes**
+
+Resume Upload and Management feature designed to streamline your job application process. This functionality allows users to efficiently manage their resumes directly within the application, ensuring the right document is always available for submission.
+
+![image](https://github.com/CSC510-SE-SAITEJA-MADHUMITHA-SHRUTI/WolfTrackPlus/blob/feature/mfa/resume.png)
 
 <br>
 
@@ -220,9 +225,10 @@ An email is sent when a new account is created, new job application is submitted
 
 ![image](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/project3/Project3/Assets/welcomeemail.JPG?raw=true)
 
+An email is sent and when a status change in application.
+
 ![image](https://user-images.githubusercontent.com/51504486/144724525-adb6691e-046a-479c-a050-341b9cf64d73.png)
 
-![image](https://user-images.githubusercontent.com/51504486/144724556-7d3bad98-5175-4663-bc2d-b601dac4137f.png)
 
 ## SkillSync
 
