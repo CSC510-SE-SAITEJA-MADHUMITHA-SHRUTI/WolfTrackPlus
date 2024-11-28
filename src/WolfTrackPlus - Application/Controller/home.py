@@ -601,7 +601,7 @@ def logout():
     return redirect("/login")
 
 @home_route.route("/analytics/salary-trends", methods=["GET"])
-@login_required
+#@login_required
 def salary_trends():
     try:
         email = session.get("email")
@@ -623,7 +623,7 @@ def salary_trends():
         return jsonify({"error": "Internal server error"}), 500
 
 @home_route.route("/analytics/salary-graph", methods=["GET"])
-@login_required  # Protects the route for logged-in users
+#@login_required  # Protects the route for logged-in users
 def salary_graph():
     """
     Route to render the salary graph page.
