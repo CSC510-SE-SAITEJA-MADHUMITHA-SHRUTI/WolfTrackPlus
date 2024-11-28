@@ -28,6 +28,7 @@ from flask_restful import Resource, Api
 from Controller.application_controller import Application
 from Controller.user_controller import User
 from Controller.home import home_route
+from Controller.analytics_route import analytics_route
 
 app = Flask(__name__)
 api = Api(app)
@@ -37,6 +38,8 @@ api.add_resource(Application, "/application")
 app.register_blueprint(home_route, name="login", url_prefix="/login")
 app.register_blueprint(home_route, name="home", url_prefix="/")
 app.register_blueprint(home_route, name="auth", url_prefix="/auth")
+app.register_blueprint(analytics_route, url_prefix="/analytics_route")
+
 app.app_context().push()
 
 
