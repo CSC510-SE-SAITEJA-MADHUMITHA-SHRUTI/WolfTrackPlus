@@ -338,3 +338,13 @@ class application_dao:
             "DELETE FROM application WHERE application_id=" + str(application_id)
         )
         return res
+    
+    def get_salary_by_company(self, email):
+        query = """
+            SELECT company_name, salary
+            FROM applications
+            WHERE email = :email
+        """
+        result = self.execute_query(query, {"email": email})
+        return result.fetchall()
+
