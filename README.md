@@ -208,7 +208,7 @@ Helps in location-tracking functionality of job applications. This feature allow
 
 Resume Upload and Management feature designed to streamline your job application process. This functionality allows users to efficiently manage their resumes directly within the application, ensuring the right document is always available for submission.
 
-![image]()
+![image](https://github.com/CSC510-SE-SAITEJA-MADHUMITHA-SHRUTI/WolfTrackPlus/blob/feature/mfa/resume.png)
 
 <br>
 
@@ -225,9 +225,10 @@ An email is sent when a new account is created, new job application is submitted
 
 ![image](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/project3/Project3/Assets/welcomeemail.JPG?raw=true)
 
+An email is sent and when a status change in application.
+
 ![image](https://user-images.githubusercontent.com/51504486/144724525-adb6691e-046a-479c-a050-341b9cf64d73.png)
 
-![image](https://user-images.githubusercontent.com/51504486/144724556-7d3bad98-5175-4663-bc2d-b601dac4137f.png)
 
 ## SkillSync
 
