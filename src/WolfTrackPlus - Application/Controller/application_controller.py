@@ -2,6 +2,7 @@ from flask import render_template, request
 from flask_restful import Resource
 from flask_login import login_required
 from DAO.application_dao import application_dao
+from flask import jsonify
 
 
 class Application(Resource):

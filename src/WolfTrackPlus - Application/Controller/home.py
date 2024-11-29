@@ -25,7 +25,10 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 import pandas as pd
 import pyotp 
 from Controller.user_controller import User
-
+from Controller.email_framework import password_reset_email  # Adjust the module name as needed
+from Controller.email_framework import successful_reset_email 
+from Controller.email_framework import send_registration_email  # Adjust as necessary
+from Controller.email_framework import status_change_email
 
 project_root = Path(__file__).parent.parent
 
