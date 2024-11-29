@@ -210,6 +210,12 @@ Resume Upload and Management feature designed to streamline your job application
 
 ![image](https://github.com/CSC510-SE-SAITEJA-MADHUMITHA-SHRUTI/WolfTrackPlus/blob/feature/mfa/resume.png)
 
+- **Salary Insights Dashboard**
+  
+Gain valuable insights into your earnings with an interactive dashboard that visualizes your salary trends, comparisons, and growth over time, tailored to help you make informed career decisions.
+
+
+
 <br>
 
     
