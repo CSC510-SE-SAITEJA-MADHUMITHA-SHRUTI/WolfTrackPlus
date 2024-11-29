@@ -214,6 +214,7 @@ Resume Upload and Management feature designed to streamline your job application
   
 Gain valuable insights into your earnings with an interactive dashboard that visualizes your salary trends, comparisons, and growth over time, tailored to help you make informed career decisions.
 
+![image](https://github.com/CSC510-SE-SAITEJA-MADHUMITHA-SHRUTI/WolfTrackPlus/blob/main/salary.png)
 
 
 <br>
