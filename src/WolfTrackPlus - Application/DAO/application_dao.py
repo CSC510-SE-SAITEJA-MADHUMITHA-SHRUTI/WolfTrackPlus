@@ -347,6 +347,5 @@ class application_dao:
             INNER JOIN user ON application.user_id = user.user_id
             WHERE user.email = :email
         """
-        result = self.execute_query(query, {"email": email})
-        return result.fetchall()
-
+        result = self.__db.run_query(query, (email,))
+        return result
