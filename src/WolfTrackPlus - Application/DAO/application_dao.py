@@ -345,7 +345,7 @@ class application_dao:
             FROM application
             INNER JOIN company ON application.company_id = company.company_id
             INNER JOIN user ON application.user_id = user.user_id
-            WHERE user.email = :email
+            WHERE user.email = %s
         """
         result = self.__db.run_query(query, (email,))
         return result
