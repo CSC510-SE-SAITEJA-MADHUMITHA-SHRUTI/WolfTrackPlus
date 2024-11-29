@@ -139,6 +139,13 @@ class Application(Resource):
         formatted_data = [{"company": item[0], "salary": item[1]} for item in salary_data]
 
         return jsonify(formatted_data)
+    
+    def get_salary_by_company(self, email):
+        """
+        Fetch salary trends for a specific user.
+        Delegates to the application_dao class.
+        """
+        return self.application.get_salary_by_company(email)
 
 
 
