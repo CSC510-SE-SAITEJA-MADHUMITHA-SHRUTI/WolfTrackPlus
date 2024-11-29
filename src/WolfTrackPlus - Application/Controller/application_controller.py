@@ -2,6 +2,7 @@ from flask import render_template, request
 from flask_restful import Resource
 from flask_login import login_required
 from DAO.application_dao import application_dao
+from flask import jsonify
 
 
 class Application(Resource):
@@ -124,7 +125,32 @@ class Application(Resource):
             status,
             application_id,
         )
+    
+    def get_salary_trends(self, email):
+        """
+        Fetches salary trends for applications made by the given user.
 
-    # @login_required
-    def delete(self, application_id):
-        return self.application.delete_application(application_id)
+        :param email: Email of the user
+        :return: JSON containing company names and corresponding salaries
+        """
+        # Fetch salary data using the DAO
+        salary_data = self.application.get_salary_by_company(email)
+
+        # Format the result into a list of dictionaries
+        formatted_data = [{"company": item[0], "salary": item[1]} for item in salary_data]
+
+        return jsonify(formatted_data)
+    
+    def get_salary_by_company(self, email):
+        """
+        Fetch salary trends for a specific user.
+        Delegates to the application_dao class.
+        """
+        return self.application.get_salary_by_company(email)
+
+
+
+   # @login_required
+def delete(self, application_id):
+    return self.application.delete_application(application_id)
+

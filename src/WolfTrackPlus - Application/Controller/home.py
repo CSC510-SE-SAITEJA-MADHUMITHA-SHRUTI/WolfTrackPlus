@@ -25,7 +25,10 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 import pandas as pd
 import pyotp 
 from Controller.user_controller import User
-
+from Controller.email_framework import password_reset_email  # Adjust the module name as needed
+from Controller.email_framework import successful_reset_email 
+from Controller.email_framework import send_registration_email  # Adjust as necessary
+from Controller.email_framework import status_change_email
 
 project_root = Path(__file__).parent.parent
 
@@ -599,6 +602,38 @@ def logout():
         session.pop("email", None)
     # logout_user()
     return redirect("/login")
+
+@home_route.route("/analytics/salary-trends", methods=["GET"])
+#@login_required
+def salary_trends():
+    try:
+        email = session.get("email")
+        if not email:
+            return jsonify({"error": "User not logged in"}), 403
+
+        salary_data = application.get_salary_by_company(email)  # DAO method
+
+        if not salary_data:
+            return jsonify({"error": "No salary data found"}), 404
+
+        # Format the result into a list of dictionaries
+        formatted_data = [{"company": item[0], "salary": item[1]} for item in salary_data]
+
+        return jsonify(formatted_data)
+
+    except Exception as e:
+        print(f"Error in salary_trends: {e}")
+        return jsonify({"error": "Internal server error"}), 500
+
+@home_route.route("/analytics/salary-graph", methods=["GET"])
+#@login_required  # Protects the route for logged-in users
+def salary_graph():
+    """
+    Route to render the salary graph page.
+    """
+    return render_template("analytics.html")
+
+
 
 
 # if __name__ == '__main__':

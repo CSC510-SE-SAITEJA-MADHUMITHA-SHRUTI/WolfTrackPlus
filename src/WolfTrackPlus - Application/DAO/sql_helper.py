@@ -47,19 +47,18 @@ class sql_helper:
             pass
             # Need to import error handling class
 
-    def run_query(self, query):
-        """
-        Runs the specified query through the database and returns the output.
-
-        Args:
-            query (string): [Requires a valid SQL query passed as an argument.]
-
-        Returns:
-            [Tuple(Tuple..)]: [The output of the query being executed on the database is returned in the form of nested tuples.]
-        """
+    def run_query(self, query, params=None):
         self.connect_database()
-        tempCursor = self.connection_obj.cursor()
-        tempCursor.execute(query)
-        output = tempCursor.fetchall()
-        self.disconnect_database()
-        return output
+        try:
+            tempCursor = self.connection_obj.cursor()
+            if params:
+                tempCursor.execute(query, params)
+            else:
+                tempCursor.execute(query)
+            output = tempCursor.fetchall()
+            return output
+        except Exception as e:
+            print(f"Error executing query: {e}")
+            return None
+        finally:
+            self.disconnect_database()

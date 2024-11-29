@@ -341,8 +341,113 @@
     }
   });
 </script>
+<!-- Existing Chart for Applications Per Month -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+<script>
+    const applicationData = {{ application_data | tojson }};
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (applicationData && applicationData.length > 0) {
+      const months = applicationData.map(item => {
+        const [year, month] = item.month.split('-');
+        const date = new Date(year, month - 1);
+        return date.toLocaleString('default', { month: 'short', year: 'numeric' });
+      });
+      const applicationCounts = applicationData.map(item => item.application_count);
+
+      const ctx = document.getElementById('applicationsChart').getContext('2d');
+      const applicationsChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: months,
+          datasets: [{
+            label: 'Number of Applications',
+            data: applicationCounts,
+            backgroundColor: 'rgba(75, 192, 192, 0.6)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: {
+                precision: 0
+              }
+            }
+          }
+        }
+      });
+    } else {
+      console.log('No application data available to display.');
+    }
+  });
+</script>
+
+<!-- New Section for Salary Trends -->
+<div class="card mt-4">
+  <div class="card-header">
+    <h5 class="card-title mb-0">Salary Trends Across Applications</h5>
+  </div>
+  <div class="card-body">
+    <canvas id="salaryChart"></canvas>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    fetch("/analytics/salary-trends")
+      .then(response => response.json())
+      .then(salaryData => {
+        if (salaryData.error) {
+          console.error(salaryData.error);
+        } else {
+          const companies = salaryData.map(item => item.company);
+          const salaries = salaryData.map(item => item.salary);
+
+          const ctx = document.getElementById("salaryChart").getContext("2d");
+          new Chart(ctx, {
+            type: "bar",
+            data: {
+              labels: companies,
+              datasets: [{
+                label: "Salary ($)",
+                data: salaries,
+                backgroundColor: "rgba(75, 192, 192, 0.6)",
+                borderColor: "rgba(75, 192, 192, 1)",
+                borderWidth: 1
+              }]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              scales: {
+                x: {
+                  ticks: {
+                    autoSkip: false,
+                    maxRotation: 45,
+                    minRotation: 0
+                  }
+                },
+                y: {
+                  beginAtZero: true,
+                  ticks: {
+                    precision: 0
+                  }
+                }
+              }
+            }
+          });
+        }
+      })
+      .catch(error => console.error("Error fetching salary data:", error));
+  });
+</script>
 
 </body>
-
 </html>
