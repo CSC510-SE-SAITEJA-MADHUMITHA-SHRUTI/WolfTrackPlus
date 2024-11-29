@@ -340,12 +340,17 @@ class application_dao:
         return res
     
     def get_salary_by_company(self, email):
-        query = """
-            SELECT company.company_name, application.salary
-            FROM application
-            INNER JOIN company ON application.company_id = company.company_id
-            INNER JOIN user ON application.user_id = user.user_id
-            WHERE user.email = %s
-        """
-        result = self.__db.run_query(query, (email,))
-        return result
+        try:
+            query = """
+                SELECT company.company_name, application.salary
+                FROM application
+                INNER JOIN company ON application.company_id = company.company_id
+                INNER JOIN user ON application.user_id = user.user_id
+                WHERE user.email = %s
+               """
+            result = self.__db.run_query(query, (email,))
+            return result
+        except Exception as e:
+            print(f"Error executing query: {e}")
+            raise  # Re-raise the exception to propagate it
+
