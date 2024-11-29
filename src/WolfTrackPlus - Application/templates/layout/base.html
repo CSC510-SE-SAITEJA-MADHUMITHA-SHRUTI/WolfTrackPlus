@@ -390,11 +390,10 @@
 </script>
 
 <!-- New Section for Salary Trends -->
-<div class="card-header custom-card-header">
-  <div class="card-header" style="background-color: rgb(7, 5, 5);">
-    <h5 class="card-title mb-0" style="color: black;">Salary Trends Across Applications</h5>
+<div class="card mt-4">
+  <div class="card-header">
+    <h5 class="card-title mb-0">Salary Trends Across Applications</h5>
   </div>
-
   <div class="card-body">
     <canvas id="salaryChart"></canvas>
   </div>
@@ -426,6 +425,7 @@
             },
             options: {
               responsive: true,
+              maintainAspectRatio: false,
               scales: {
                 x: {
                   ticks: {
@@ -450,9 +450,4 @@
 </script>
 
 </body>
-</html>
-
-
-</body>
-
 </html>
