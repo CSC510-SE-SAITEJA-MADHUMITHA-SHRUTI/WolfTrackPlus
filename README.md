@@ -44,7 +44,7 @@ With WolfTrackPlus, take control of your job search and pave the way for a more 
 
 ## Scorecard
 
-[Score card - Group 13](https://github.com/CSC510-SE-SAITEJA-MADHUMITHA-SHRUTI/WolfTrackPlus/blob/main/Project3_group81_scorecard.csv)
+[Score card - Group 81](https://github.com/CSC510-SE-SAITEJA-MADHUMITHA-SHRUTI/WolfTrackPlus/blob/main/Project3_group81_scorecard.csv)
 
 
 ### Link to Demonstration Video of the Project: 
